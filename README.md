@@ -22,12 +22,14 @@ The `Config` tab is where you input all your locations of the files. This will s
 
 ## Interface
 The `interface` tab is where you would input the Names of things and if it is a sprite related, the location of the sprite.
+
 ![alt text][logo]
 
 [logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot02.png?raw=true "Screenshot of Interface Tab"
 
 ## Info
 The `info` tab is where information about the program is. Such as the version of the program, liscence, etc.
+
 ![alt text][logo]
 
 [logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot03.png?raw=true "Screenshot of Info Tab"
