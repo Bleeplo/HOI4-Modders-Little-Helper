@@ -9,6 +9,7 @@ Desc:A program/tool made in Python3 that helps deal with some of the tedious par
 |Automated ideas.gfx      |                           |
 
 Requirements: Python3, Python Imported Libraries
+
 Everything is really powered by os & tkinter with a few other libraries
 
 # The way things work:
