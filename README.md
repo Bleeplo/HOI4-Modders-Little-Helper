@@ -21,3 +21,6 @@ The `interface` tab is where you would input the Names of things and if it is a 
 
 ## Info
 The `info` tab is where information about the program is. Such as the version of the program, liscence, etc.
+
+# IMPORTANT
+When you are dealing with goals.gfx,goals_shine.gfx, & ideas.gfx! Make sure the ending line is the concluding curly brackect to spriteTypes. Otherwise the script will mess up the .gfx file (to an extent)
