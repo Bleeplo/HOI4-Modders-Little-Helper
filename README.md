@@ -27,6 +27,13 @@ The `interface` tab is where you would input the Names of things and if it is a 
 
 [logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot02.png?raw=true "Screenshot of Interface Tab"
 
+## Template Designer
+The `Template Designer` tab is where you would input the name of your division template, namelist, unit & their column+row, along with the support units that accompany the division.
+
+![alt text][logo]
+
+[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot04.png?raw=true "Screenshot of Config Tab"
+
 ## Info
 The `info` tab is where information about the program is. Such as the version of the program, liscence, etc.
 
