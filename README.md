@@ -33,7 +33,7 @@ The `Template Designer` tab is where you would input the name of your division t
 
 ![alt text][logo]
 
-[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot04.png?raw=true "Screenshot of Config Tab"
+[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot04.png?raw=true "Screenshot of Template Designer Tab"
 
 ## Info
 The `info` tab is where information about the program is. Such as the version of the program, liscence, etc.
