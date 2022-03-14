@@ -17,30 +17,30 @@ Everything is really powered by os & tkinter with a few other libraries
 ## Config
 The `Config` tab is where you input all your locations of the files. This will save a txt file that will contain the locations of the files that you just inputed into the entry boxes. This is implemented, because now you don't have to keep reputting in the location of the file. It will just remember because it saved it in the .txt file mentioned previously.
 
-![alt text][logo]
+![alt text][logo1]
 
-[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot01.png?raw=true "Screenshot of Config Tab"
+[logo1]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot01.png?raw=true "Screenshot of Config Tab"
 
 ## Interface
 The `interface` tab is where you would input the Names of things and if it is a sprite related, the location of the sprite.
 
-![alt text][logo]
+![alt text][logo2]
 
-[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot02.png?raw=true "Screenshot of Interface Tab"
+[logo2]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot02.png?raw=true "Screenshot of Interface Tab"
 
 ## Template Designer
 The `Template Designer` tab is where you would input the name of your division template, namelist, unit & their column+row, along with the support units that accompany the division.
 
-![alt text][logo]
+![alt text][logo3]
 
-[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot04.png?raw=true "Screenshot of Template Designer Tab"
+[logo3]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot04.png?raw=true "Screenshot of Template Designer Tab"
 
 ## Info
 The `info` tab is where information about the program is. Such as the version of the program, liscence, etc.
 
-![alt text][logo]
+![alt text][logo4]
 
-[logo]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot03.png?raw=true "Screenshot of Info Tab"
+[logo4]: https://github.com/Bleeplo/HOI4-Modders-Little-Helper/blob/main/screenshot_of_program/screenshot03.png?raw=true "Screenshot of Info Tab"
 
 
 # IMPORTANT
