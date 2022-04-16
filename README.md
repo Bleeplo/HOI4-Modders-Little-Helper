@@ -5,7 +5,7 @@ Desc:A program/tool made in Python3 that helps deal with some of the tedious par
 | What is implemented         | Planned to be implemented |
 | ----------------------------|:-------------------------:|
 |Automated goals.gfx          |Automated Localisation     |
-|Automated goals_shine.gfx    |                           |
+|Automated goals_shine.gfx    |Automated Flagging         |
 |Automated ideas.gfx          |                           |
 |Automated Division Designer  |                           |
 
