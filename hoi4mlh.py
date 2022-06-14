@@ -45,7 +45,7 @@ def frame_save_button(framenum, button_label_sentence, custom_command, backgroun
     font="none 15", command=custom_command).grid(row=text_row, rowspan=text_rowspan, column=text_column, columnspan=text_columnspan, sticky=sticky_angle)
 
 def displaybox_with_refresh_button_clipboard_button(framenum, filename, width, height, displaybox_text_row, displaybox_text_rowspan, displaybox_text_column, displaybox_text_columnspan, displaybox_stickyangle, button_backgroundcolor, button_frontcolor, button_text_row, button_text_rowspan, button_text_column, button_text_columnspan, button_sticky_angle, clipbutton_text_row, clipbutton_text_rowspan, clipbutton_text_column, clipbutton_text_columnspan, clipbutton_sticky_angle):
-    __location__ = os.chdir(os.path.realpath( 
+    __location__ = os.chdir(os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))) # opens relative path directory/location, then finds specific location
     create_file = open(filename, 'a') # creates file upon launching script, we do this because otherwise reading the file in the preview box would not work
     create_file.close()
@@ -55,7 +55,7 @@ def displaybox_with_refresh_button_clipboard_button(framenum, filename, width, h
             division_template_displaybox.delete(1.0, END) # deletes contents of text box
             division_template_displaybox.insert(1.0, file.read())
         delete_content = open(filename, 'w+')             # clears file so it can display next template that was made
-        delete_content.close()    
+        delete_content.close()
 
     def copy_to_clipboard():
         division_template_displaybox.clipboard_clear()
@@ -71,15 +71,15 @@ def displaybox_with_refresh_button_clipboard_button(framenum, filename, width, h
     font="none 15", command=copy_to_clipboard).grid(row=clipbutton_text_row, rowspan=clipbutton_text_rowspan, column=clipbutton_text_column, columnspan=clipbutton_text_columnspan, sticky=clipbutton_sticky_angle)
 
 def dropdownmenu_templatedesigner_namelists(framenum, text_row, text_rowspan, text_column, text_columnspan, sticky_angle):
-    english_generic = [ 
-    "BRENGL_INF_01", 
-    "BRENGL_INFB_01", 
-    "BRENGL_CAV_01", 
-    "BRENGL_CAV_02", 
-    "BRENGL_MOT_01", 
-    "AMENGL_MOT_01", 
-    "BRENGL_MEC_01", 
-    "AMENGL_MEC_01", 
+    english_generic = [
+    "BRENGL_INF_01",
+    "BRENGL_INFB_01",
+    "BRENGL_CAV_01",
+    "BRENGL_CAV_02",
+    "BRENGL_MOT_01",
+    "AMENGL_MOT_01",
+    "BRENGL_MEC_01",
+    "AMENGL_MEC_01",
     "BRENGL_ARM_01",
     "BRENGL_ARM_02",
     "AMENGL_ARM_01",
@@ -89,7 +89,7 @@ def dropdownmenu_templatedesigner_namelists(framenum, text_row, text_rowspan, te
     "BRENGL_GAR_01",
     ]
     global dropdown_menu_namelists
-    dropdown_menu_namelists = ttk.Combobox(framenum, 
+    dropdown_menu_namelists = ttk.Combobox(framenum,
     textvariable=english_generic,
     )
     dropdown_menu_namelists["value"] = english_generic                    ### tgus us required our else the list of options will not diplsay
@@ -99,22 +99,22 @@ def dropdownmenu_templatedesigner_namelists(framenum, text_row, text_rowspan, te
 def dropdownmenu_templatedesigner_regiment_type(framenum, text_row, text_rowspan, text_column, text_columnspan, sticky_angle):
     global clicked_unit_type                                    ### we declare global so we can use it in another function, to input the dropdown values
     clicked_unit_type = StringVar()
-    global unit_type 
-    unit_type = [ 
-    "Infantry", 
+    global unit_type
+    unit_type = [
+    "Infantry",
     "Mobile",
     "Armored",
     ]
 
     global dropdown_menu_regiment_type
-    dropdown_menu_regiment_type = ttk.Combobox(framenum, 
+    dropdown_menu_regiment_type = ttk.Combobox(framenum,
     textvariable=clicked_unit_type, state="readonly"          ### <--- textvariable is very important, because it along with many other things dictates what the other dropdownbox will display avaible
     )
     dropdown_menu_regiment_type.config(width=17)
     dropdown_menu_regiment_type.grid(row=text_row, rowspan=text_rowspan, column=text_column, columnspan=text_columnspan, sticky=sticky_angle)
 
 def dropdownmenu_templatedesigner_regiment_unit(framenum, text_row, text_rowspan, text_column, text_columnspan, sticky_angle):
-    
+
     def check_dropdown_list(index, value, op):                      ### This function checks to see the selected options in the unit-type-dropdownbox, then displays the corresponding units on the unit-dropdowmbox
         if clicked_unit_type.get() == unit_type[0]: # Infantry
             dropdown_menu_regiment_unit["value"] = unit_avaible_in_category_infantry
@@ -122,7 +122,7 @@ def dropdownmenu_templatedesigner_regiment_unit(framenum, text_row, text_rowspan
             dropdown_menu_regiment_unit["value"] = unit_avaible_in_category_mobile
         elif clicked_unit_type.get() == unit_type[2]: # Armor/Tank
             dropdown_menu_regiment_unit["value"] = unit_avaible_in_category_armored
-    
+
     ### Lists
     unit_avaible_in_category_infantry = [
                 "infantry",
@@ -169,12 +169,12 @@ def dropdownmenu_templatedesigner_regiment_unit(framenum, text_row, text_rowspan
                 "super_heavy_tank_destroyer_brigade",
                 "modern_tank_destroyer_brigade",
             ]
-    
+
     ###  |  This is more unit-type
     ###  v  related
     clicked_unit_type.trace("w", check_dropdown_list)
     dropdown_menu_regiment_type["value"] = unit_type                ### list of the unit_types. Also unit_types would not display without this command; this really belongs more in the regiment type function, but im just going to keep it here
-    
+
     ### |   This is more unit
     ### v   related
     global dropdown_menu_regiment_unit
@@ -248,7 +248,7 @@ def goals_sprite_writer(line_location, sprite_id, sprite_texturefile):          
                 if ptr != countLines:                               # we want to remove the last line
                     fw.write(line)
                 ptr += 1
-    
+
     given_line_location.write("SpriteType = {\n")
     given_line_location.write("    name = \"GFX_focus_" + sprite_id + "\"\n")
     given_line_location.write("    texturefile = \"" + sprite_texturefile + "\"\n")
@@ -343,11 +343,11 @@ def create_regiment_config_file():
     int_start_now = int(start_row) + 1
     ### Saving to config file
     save_path.seek(0)
-    save_path.write("       "+regiment_unit+" = { x = "+start_row+" y ="+regiment_column+" }\n") # print initially
+    save_path.write("       "+regiment_unit+" = { x = "+regiment_column+" y ="+start_row+" }\n") # print initially
     for i in range(range_math): # repeat making the same unit over and over until given row number is reached
         save_path.write(f"       {regiment_unit}")
         save_path.write(" = { x = ")
-        save_path.write(f"{int_start_now} y ={regiment_column}")
+        save_path.write(f"{regiment_column} y ={int_start_now}")
         save_path.write("}\n")
         int_start_now += 1
     save_path.close
@@ -365,7 +365,7 @@ def create_support_config_file():
 
     ### Saving to config file
     save_path.seek(0)
-    save_path.write("       "+support_unit+" = { x = "+start_row+" y = 0 }\n") # print initially
+    save_path.write("       "+support_unit+" = { x = 0 y = "+start_row+" }\n") # print initially
     save_path.close
 
 def create_division_template_config_file():
@@ -380,16 +380,16 @@ def create_division_template_config_file():
     namelist = dropdown_menu_namelists.get()
 
     ### Reading regiment_constructor.txt & support_constructor.txt to then copy the contents of so and then clear the txt files
-    __location__ = os.chdir(os.path.realpath( 
+    __location__ = os.chdir(os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))) # opens relative path directory/location, then finds specific location (which is regiment_constructor.txt)
     regiment_config_file = open("regiment_constructor.txt", 'r+') # reads in the relative path of the .py script for regiment_constructor.txt
     regiment_file_content = regiment_config_file.readlines()
 
-    __location__ = os.chdir(os.path.realpath( 
+    __location__ = os.chdir(os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))) # opens relative path directory/location, then finds specific location (which is support_constructor.txt)
     support_config_file = open("support_constructor.txt", 'r+') # reads in the relative path of the .py script for support_constructor.txt
     support_file_content = support_config_file.readlines()
-    
+
     ### Saving to config file
     save_path.write("division_template = {\n")
     save_path.write("   name=\"" + division_name + "\"\n")
@@ -411,13 +411,13 @@ def edit_interface_files_goals():
     goals_location_entry_dir = goals_location_entry.get()       # goal location
 
     ### Reading config_directories.txt to then go to file location for editing
-    __location__ = os.chdir(os.path.realpath( 
+    __location__ = os.chdir(os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))) # opens relative path directory/location, then finds specific location (which is config_directories.txt)
     config_open_file = open("config_directories.txt", 'r') # reads in the relative path of the .py script for config_directories.txt
-    
+
     content = config_open_file.readlines()                 # what we use here to read the lines of the file
     #^^!! to read specific line, format: content[linenumber] or content[linenumber:linenumber]
-    
+
     ### Fixing directory location
     def stripped_content(linenumber):
         return content[linenumber].strip("\n") # we use .strip because other wise, when it writes to the gfx file, it will create a gile with the same name but with a new-line after the file extention. So we need to remove \n, because when it reads the line, it will read the line break (\n) as well
@@ -433,13 +433,13 @@ def edit_interface_files_ideas():
     idea_location_entry_dir = idea_location_entry.get()         # idae location
 
     ### Reading config_directories.txt to then go to file location for editing
-    __location__ = os.chdir(os.path.realpath( 
+    __location__ = os.chdir(os.path.realpath(
         os.path.join(os.getcwd(), os.path.dirname(__file__)))) # opens relative path directory/location, then finds specific location (which is config_directories.txt)
     config_open_file = open("config_directories.txt", 'r') # reads in the relative path of the .py script for config_directories.txt
-    
+
     content = config_open_file.readlines()                 # what we use here to read the lines of the file
     #^^!! to read specific line, format: content[linenumber] or content[linenumber:linenumber]
-    
+
     ### Fixing directory location
     def stripped_content(linenumber):
         return content[linenumber].strip("\n") # we use .strip because other wise, when it writes to the gfx file, it will create a gile with the same name but with a new-line after the file extention. So we need to remove \n, because when it reads the line, it will read the line break (\n) as well
@@ -520,7 +520,7 @@ displaybox_with_refresh_button_clipboard_button(frame3, 'division_template_confl
 ## FRAME4
 text_grid(frame4, "Details:", "lightgrey", "black", 2, 1, 1, 1)
 text_grid(frame4, "Version: ", "lightgrey", "black", 3, 1, 1, 1)
-text_grid(frame4, "1.2.5", "lightgrey", "black", 3, 1, 2, 1)
+text_grid(frame4, "1.2.6", "lightgrey", "black", 3, 1, 2, 1)
 text_grid(frame4, "Liscence: ", "lightgrey", "black", 4, 1, 1, 1)
 text_grid(frame4, "GPL3", "lightgrey", "black", 4, 1, 2, 1)
 text_grid(frame4, "Gitpage: ", "lightgrey", "black", 5, 1, 1, 1)
